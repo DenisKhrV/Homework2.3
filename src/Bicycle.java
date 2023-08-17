@@ -5,18 +5,16 @@ public class Bicycle extends Vehicle {
         super(modelName, wheelsCount);
     }
 
+
     @Override
-    public void checkTrailer() {
+    public void doService() {
+        System.out.println("Обслуживаем " + this.getModelName());
+        updateTyre();
 
     }
-
-    @Override
     public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
-
-    @Override
-    public void checkEngine() {
-
+        for (int i = 0; i < getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку");
+        }
     }
 }
